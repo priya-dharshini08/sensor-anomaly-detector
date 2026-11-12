@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // GitHub Repository URL-ah ungaloda link-ku etha maathiri check pannikonga
+                // GitHub repository checkout
                 git branch: 'main', url: 'https://github.com/priya-dharshini08/sensor-anomaly-detector.git'
             }
         }
 
         stage('Build and Test Datasets') {
             steps {
-                // Maven clean & test command run aagum
+                // Run maven clean and test
                 bat 'mvn clean test'
             }
         }
@@ -19,7 +19,7 @@ pipeline {
 
     post {
         always {
-            // Maven surefire test reports-ah Jenkins-ku record pannum
+            // Correct Maven Surefire XML reports path-a specify panrom
             junit 'target/surefire-reports/*.xml'
         }
     }
