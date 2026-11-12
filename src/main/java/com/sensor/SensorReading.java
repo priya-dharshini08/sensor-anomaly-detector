@@ -5,6 +5,7 @@ public class SensorReading {
     private double temperature;
     private double vibration;
 
+    // Single 3-Parameter Constructor (Duplicate illamal irukkanum)
     public SensorReading(String sensorId, double temperature, double vibration) {
         this.sensorId = sensorId;
         this.temperature = temperature;

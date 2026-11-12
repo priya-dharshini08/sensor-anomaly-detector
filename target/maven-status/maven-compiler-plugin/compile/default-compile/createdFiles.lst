@@ -1,0 +1,3 @@
+com\sensor\AnomalyDetector.class
+com\sensor\AnomalySummary.class
+com\sensor\SensorReading.class
