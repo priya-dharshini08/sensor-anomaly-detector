@@ -2,23 +2,24 @@ package com.sensor;
 
 public class SensorReading {
     private String sensorId;
-    private String timestamp;
-    private String sensorType;
-    private double value;
-    private String status;
+    private double temperature;
+    private double vibration;
 
-    public SensorReading(String sensorId, String timestamp, String sensorType, double value) {
+    public SensorReading(String sensorId, double temperature, double vibration) {
         this.sensorId = sensorId;
-        this.timestamp = timestamp;
-        this.sensorType = sensorType;
-        this.value = value;
-        this.status = "Normal";
+        this.temperature = temperature;
+        this.vibration = vibration;
     }
 
-    public String getSensorId() { return sensorId; }
-    public String getTimestamp() { return timestamp; }
-    public String getSensorType() { return sensorType; }
-    public double getValue() { return value; }
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public String getSensorId() {
+        return sensorId;
+    }
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public double getVibration() {
+        return vibration;
+    }
 }
